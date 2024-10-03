@@ -1,4 +1,5 @@
-* {
+
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,6 +14,13 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .card {
     background-color: #1a1a1a;
     padding: 20px;
@@ -22,7 +30,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.profile-img {
+.card__profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -30,40 +38,42 @@ body {
     margin-bottom: 15px;
 }
 
-h2 {
-    font-size: 1.5em;
+.card__name {
+    font-size: 1.5rem;
     color: #fff;
     margin-bottom: 5px;
 }
 
-.location {
+.card__location {
     color: #8fbc56;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
-.bio {
+.card__bio {
     color: #ccc;
-    font-size: 0.85em;
+    font-size: 0.85rem;
     margin-bottom: 20px;
     font-style: italic;
 }
 
-.buttons {
+.card__buttons {
+    list-style: none;
     display: flex;
     flex-direction: column;
 }
 
-.btn {
+.card__btn {
     background-color: #333;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
     text-decoration: none;
+    text-align: center;
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+.card__btn:hover {
     background-color: #444;
 }
